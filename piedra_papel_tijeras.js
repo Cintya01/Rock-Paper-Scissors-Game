@@ -1,16 +1,15 @@
-var player = "piedra";
-var cpu = "piedra";
-var resultado;
+var v1 = "piedra";
+var v2 = "papel";
+var v3 = "tijera";
 
-function Game(){
+
+function Game(player, cpu){
     if (player === cpu) {
         return resultado ="Empate";
-    } else if (player == "tijera" && cpu == "papel" || player == "papel" && cpu == "piedra" || player == "piedra" && cpu == "tijera") {
-        return resultado ="Player Wins";
-    } else if (cpu == "tijera" && player == "papel" || cpu == "papel" && player == "piedra" || cpu == "piedra" && player == "tijera") {
-        return resultado = "CPU Wins"
+    } else if (player === v3 && cpu === v2 || player === v2 && cpu === v1 || player === v1 && cpu == v3) {
+        return resultado ="Player Wins";  
     } else {
-        return resultad = "Ingrese valores correctos"
+        return resultado = "CPU Wins"
     }
 }
 
